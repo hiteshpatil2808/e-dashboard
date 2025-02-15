@@ -1,66 +1,43 @@
-.nav-ul li {
-  display: inline-block;
-  padding: 10px;
-}
-
-.nav-ul li a {
-  color: #fff;
-  padding: 5px;
-  text-decoration: none;
-}
-
-.nav-ul {
-  padding: 5px;
+/* 1) Ensure browser can use full height */
+html,
+body {
   margin: 0;
-  background-color: skyblue;
+  padding: 0;
+  height: 100%; /* So the app can fill the screen */
 }
 
+/* 2) Make #root and .App fill the screen as a flex column */
+#root {
+  height: 100%;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+/* 3) Main content grows to push the footer down if needed */
+.main-content {
+  flex: 1; 
+  /* Add padding if you want: padding: 20px; */
+}
+
+/* 4) Footer styling (no absolute positioning) */
 .footer {
-  position: absolute;
-  bottom: 0;
+  /* Remove: bottom: 0; */
   text-align: center;
   width: 100%;
-  background-color: skyblue;
+  background: linear-gradient(90deg, #00aaff, #0077cc);
+  padding: 5px 10px;
+  justify-content: space-between;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.register, .product {
-  margin-left: 35%;
-}
+/* Keep your other classes as is... */
 
-.login {
-  margin-left: 35%;
-  margin-top: 100px;
-}
-
-.inputBox {
-  display: block;
-  margin: 20px;
-  padding: 8px;
-  width: 300px;
-  border: 1px solid skyblue;
-}
-
-.appButton {
-  margin: 20px;
-  padding: 10px;
-  width: 120px;
-  background-color: skyblue;
-  border: 1px solid;
-  cursor: pointer;
-}
-
-.nav-right {
-  text-align: right;
-}
-
-.logo {
-  width: 48px;
-  float: left;
-  border-radius: 50%;
-  margin: 2px;
-  margin-left: 20px;
-}
-
+/* Example of your other classes */
 .invalid-input {
   color: red;
   margin-top: -20px;
@@ -73,17 +50,6 @@
   margin-top: 50px;
 }
 
-.product-list ul li {
-  display: inline-block;
-  border: 1px solid skyblue;
-  padding: 5px;
-  width: 150px;
-}
-
-.product-list ul {
-  margin: 0;
-}
-
 .search-product-box {
   width: 400px;
   margin: 20px;
@@ -92,32 +58,14 @@
   padding-left: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
+/* If you don't need .App-header for anything critical, remove or ignore it */
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 100vh; /* This can conflict with our flex layout if used */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

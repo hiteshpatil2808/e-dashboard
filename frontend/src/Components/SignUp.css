@@ -1,0 +1,80 @@
+/* 
+  A light gradient background that differs from the navbar.
+  This ensures the registration page stands out as its own design.
+*/
+.signup-container {
+    min-height: calc(100vh - 80px); /* Adjust if your navbar has different height */
+    background: linear-gradient(120deg, #f3f3f3, #ffffff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0;
+    box-sizing: border-box;
+  }
+  
+  /* 
+    The "card" that holds the form.
+    It's centered, with a white background and box shadow for a modern look.
+  */
+  .signup-card {
+    background: #ffffff;
+    width: 400px;
+    max-width: 90%;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    margin-bottom: 100px;
+  }
+  
+  /* 
+    Title with a slight margin for spacing
+  */
+  .signup-title {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  
+  /* 
+    Form inputs styled for a clean, modern appearance
+  */
+  .signup-input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+  }
+  
+  .signup-input:focus {
+    outline: none;
+    border-color: #0077cc;
+  }
+  
+  /* 
+    Button with a solid accent color.
+    Matches your existing theme but distinct from the navbar gradient.
+  */
+  .signup-button {
+    background-color: #0077cc;
+    color: #fff;
+    border: none;
+    padding: 14px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  /* 
+    Slight hover effect for modern feel.
+  */
+  .signup-button:hover {
+    background-color: #005fa3;
+  }
+  

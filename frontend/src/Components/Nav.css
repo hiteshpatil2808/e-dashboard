@@ -1,0 +1,109 @@
+/* Navbar Container */
+.navbar {
+  background: linear-gradient(90deg, #00aaff, #0077cc);
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Fix: Align logo and links in a row */
+.nav-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-container1 {
+  align-items: center;
+  width: 100%;
+}
+
+/* Logo */
+.nav-logo img {
+  width: 55px;
+  border-radius: 50%;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  align-items: center; /* Ensures links and profile are aligned */
+  gap: 25px;
+  margin-left: 20px; /* Creates space between logo and links */
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 12px;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Profile Dropdown */
+.dropdown {
+  position: relative;
+  display: flex; /* Ensures it aligns properly */
+  align-items: center;
+}
+
+/* Profile Button */
+.profile-btn {
+  padding: 10px 15px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  transition: 0.3s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  white-space: nowrap;
+  gap: 8px;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  color: black;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  min-width: 160px;
+  z-index: 10;
+}
+
+/* Dropdown Items */
+.dropdown-menu a,
+.logout-btn {
+  padding: 12px;
+  text-decoration: none;
+  color: black;
+  display: block;
+  transition: 0.3s;
+  text-align: left;
+  border: none;
+  background: none;
+  font-size: 16px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.dropdown-menu a:hover,
+.logout-btn:hover {
+  background: #00aaff;
+  color: white;
+  border-radius: 5px;
+}

@@ -36,11 +36,12 @@ function UpdateProduct() {
     navigate("/");
   }
   return (
-    <div className="product">
+    <div className="signup-container">
+      <div className="signup-card">
       <h1>Update Product</h1>
       <input
         type="text"
-        className="inputBox"
+        className="signup-input"
         value={name}
         onChange={(e) => setName(e.target.value)}
         placeholder="Enter Product Name"
@@ -48,7 +49,7 @@ function UpdateProduct() {
 
       <input
         type="text"
-        className="inputBox"
+        className="signup-input"
         value={price}
         onChange={(e) => setPrice(e.target.value)}
         placeholder="Enter Product Price"
@@ -56,7 +57,7 @@ function UpdateProduct() {
 
       <input
         type="text"
-        className="inputBox"
+        className="signup-input"
         value={category}
         onChange={(e) => setCategory(e.target.value)}
         placeholder="Enter Product Category"
@@ -64,15 +65,16 @@ function UpdateProduct() {
 
       <input
         type="text"
-        className="inputBox"
+        className="signup-input"
         value={company}
         onChange={(e) => setCompany(e.target.value)}
         placeholder="Enter Company Name"
       />
 
-      <button type="button" className="appButton" onClick={UpdateProduct}>
+      <button type="button" className="signup-button" onClick={UpdateProduct}>
         Update Product
       </button>
+    </div>
     </div>
   );
 }
