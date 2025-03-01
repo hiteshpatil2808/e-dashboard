@@ -1,9 +1,8 @@
-/* 
-  A light gradient background that differs from the navbar.
-  This ensures the registration page stands out as its own design.
-*/
-.signup-container {
-    min-height: calc(100vh - 80px); /* Adjust if your navbar has different height */
+/* FormPage.css */
+
+/* Container with gradient background (similar to SignUp) */
+.form-container {
+    min-height: calc(100vh - 80px);
     background: linear-gradient(120deg, #f3f3f3, #ffffff);
     display: flex;
     justify-content: center;
@@ -12,11 +11,8 @@
     box-sizing: border-box;
   }
   
-  /* 
-    The "card" that holds the form.
-    It's centered, with a white background and box shadow for a modern look.
-  */
-  .signup-card {
+  /* White card with shadow */
+  .form-card {
     background: #ffffff;
     width: 400px;
     max-width: 90%;
@@ -27,20 +23,16 @@
     margin-bottom: 100px;
   }
   
-  /* 
-    Title with a slight margin for spacing
-  */
-  .signup-title {
+  /* Title for Add/Update product */
+  .form-title {
     margin-bottom: 20px;
     color: #333;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 600;
   }
   
-  /* 
-    Form inputs styled for a clean, modern appearance
-  */
-  .signup-input {
+  /* Inputs */
+  .form-input {
     width: 100%;
     padding: 14px;
     margin-bottom: 20px;
@@ -51,16 +43,13 @@
     transition: border-color 0.3s;
   }
   
-  .signup-input:focus {
+  .form-input:focus {
     outline: none;
     border-color: #0077cc;
   }
   
-  /* 
-    Button with a solid accent color.
-    Matches your existing theme but distinct from the navbar gradient.
-  */
-  .signup-button {
+  /* Primary Button */
+  .form-button {
     background-color: #0077cc;
     color: #fff;
     border: none;
@@ -69,12 +58,19 @@
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s;
+    width: 100%; /* Full width for a modern look */
   }
   
-  /* 
-    Slight hover effect for modern feel.
-  */
-  .signup-button:hover {
+  .form-button:hover {
     background-color: #005fa3;
+  }
+  
+  /* Error message styling (if you keep error state) */
+  .invalid-input {
+    color: red;
+    display: block;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    font-size: 14px;
   }
   

@@ -1,12 +1,12 @@
 import "./App.css";
-import Nav from "./Components/Nav";
-import Footer from "./Components/Footer";
-import SignUp from "./Components/SignUp";
-import PrivateComponent from "./Components/PrivateComponent";
-import Login from "./Components/Login";
-import AddProduct from "./Components/AddProduct";
-import ProductList from "./Components/ProductList";
-import UpdateProduct from "./Components/UpdateProduct";
+import Nav from "./Components/Admin/Nav";
+import Footer from "./Components/Admin/Footer";
+import SignUp from "./Components/Admin/SignUp";
+import PrivateComponent from "./Components/Admin/PrivateComponent";
+import Login from "./Components/Admin/Login";
+import AddProduct from "./Components/Admin/AddProduct";
+import ProductList from "./Components/Admin/ProductList";
+import UpdateProduct from "./Components/Admin/UpdateProduct";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {

@@ -1,29 +1,28 @@
-import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import "./SignUp.css"; // Import the new CSS file
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import "./SignUp.css"; // Reuse same CSS or create a new 'Login.css'
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+
   useEffect(() => {
     const auth = localStorage.getItem("user");
     if (auth) {
       navigate("/");
     }
-  }, []);
+  }, [navigate]);
+
   async function handleLogin() {
-    console.log(email, password);
     let result = await fetch("http://localhost:5000/login", {
-      // fetch is function or API in javasript
-      method: "post",
+      method: "POST",
       body: JSON.stringify({ email, password }),
       headers: {
-        "content-Type": "application/json",
+        "Content-Type": "application/json",
       },
     });
     result = await result.json();
-    console.warn(result);
     if (result.auth) {
       localStorage.setItem("user", JSON.stringify(result.user));
       localStorage.setItem("token", JSON.stringify(result.auth));
@@ -32,28 +31,39 @@ function Login() {
       alert("Please Enter Correct Details");
     }
   }
+
   return (
     <div className="signup-container">
       <div className="signup-card">
-        <h2 className="signup-title">Log In</h2>
+        {/* Brand / Logo Section */}
+        <h2 className="brand-title">My E-Commerce</h2>
+
+        <h2 className="signup-title">Welcome Back!</h2>
 
         <input
           type="email"
           className="signup-input"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          placeholder="Enter Email"
+          placeholder="Email Address"
         />
         <input
           type="password"
           className="signup-input"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          placeholder="Enter Password"
+          placeholder="Password"
         />
+
         <button type="button" className="signup-button" onClick={handleLogin}>
-          Login
+          Log In
         </button>
+
+        {/* Don't have account? Link to Sign Up */}
+        <div className="switch-auth">
+          <span>Don’t have an account?</span>{" "}
+          <Link to="/signup" className="auth-link">Sign Up</Link>
+        </div>
       </div>
     </div>
   );

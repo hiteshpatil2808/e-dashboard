@@ -1,4 +1,4 @@
-/* 1) Ensure browser can use full height */
+/* Ensure browser can use full height */
 html,
 body {
   margin: 0;
@@ -6,7 +6,7 @@ body {
   height: 100%; /* So the app can fill the screen */
 }
 
-/* 2) Make #root and .App fill the screen as a flex column */
+/* Make #root and .App fill the screen as a flex column */
 #root {
   height: 100%;
 }
@@ -17,27 +17,24 @@ body {
   min-height: 100%;
 }
 
-/* 3) Main content grows to push the footer down if needed */
+/* Main content */
 .main-content {
   flex: 1; 
   /* Add padding if you want: padding: 20px; */
 }
 
-/* 4) Footer styling (no absolute positioning) */
+/* Footer styling */
 .footer {
-  /* Remove: bottom: 0; */
+  
+  border-bottom: 1px solid #E7E7E7;
+  color: blueviolet;
   text-align: center;
   width: 100%;
-  background: linear-gradient(90deg, #00aaff, #0077cc);
   padding: 5px 10px;
   justify-content: space-between;
-  color: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Keep your other classes as is... */
-
-/* Example of your other classes */
 .invalid-input {
   color: red;
   margin-top: -20px;
@@ -58,7 +55,6 @@ body {
   padding-left: 20px;
 }
 
-/* If you don't need .App-header for anything critical, remove or ignore it */
 .App-header {
   background-color: #282c34;
   min-height: 100vh; /* This can conflict with our flex layout if used */

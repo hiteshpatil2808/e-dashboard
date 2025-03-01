@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import "./SignUp.css"; // Import the new CSS file
+import { Link, useNavigate } from "react-router-dom";
+import "./SignUp.css";
 
 function SignUp() {
   const [name, setName] = useState("");
@@ -25,46 +25,55 @@ function SignUp() {
     });
     result = await result.json();
 
-    // Save user and token in localStorage
     localStorage.setItem("user", JSON.stringify(result.result));
     localStorage.setItem("token", JSON.stringify(result.auth));
-
-    // Navigate to home page
     navigate("/");
   }
 
   return (
     <div className="signup-container">
       <div className="signup-card">
+        {/* Brand / Logo Section */}
+        <h2 className="brand-title">My E-Commerce</h2>
+
         <h2 className="signup-title">Create an Account</h2>
 
+        {/* Name Input */}
         <input
           type="text"
           className="signup-input"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          placeholder="Enter Your Name"
+          placeholder="Full Name"
         />
 
+        {/* Email Input */}
         <input
           type="email"
           className="signup-input"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          placeholder="Enter Your Email"
+          placeholder="Email Address"
         />
 
+        {/* Password Input */}
         <input
           type="password"
           className="signup-input"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          placeholder="Enter Your Password"
+          placeholder="Password"
         />
 
         <button type="button" className="signup-button" onClick={collectData}>
           Sign Up
         </button>
+
+        {/* Already have account? Link to Login */}
+        <div className="switch-auth">
+          <span>Already have an account?</span>{" "}
+          <Link to="/login" className="auth-link">Log In</Link>
+        </div>
       </div>
     </div>
   );

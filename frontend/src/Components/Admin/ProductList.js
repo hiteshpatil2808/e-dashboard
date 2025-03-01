@@ -72,6 +72,11 @@ function ProductList() {
           onChange={searchHandle}
           placeholder="Search Product..."
         />
+        <img
+          src="https://www.futuremarketinsights.com/public/assets/images/searchIcon.svg"
+          alt="Search Icon"
+          className="search-icon"
+        />
       </div>
 
       {/* Product Table */}

@@ -1,0 +1,88 @@
+/* Light gradient background */
+.signup-container {
+  min-height: calc(100vh - 80px);
+  background: linear-gradient(120deg, #f3f3f3, #ffffff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 0;
+  box-sizing: border-box;
+}
+
+/* Card container */
+.signup-card {
+  background: #ffffff;
+  width: 400px;
+  max-width: 90%;
+  padding: 50px;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+/* Brand title (e.g., your site name) */
+.brand-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #0077cc;
+}
+
+/* Section title */
+.signup-title {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* Inputs */
+.signup-input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+.signup-input:focus {
+  outline: none;
+  border-color: #0077cc;
+}
+
+/* Primary Button */
+.signup-button {
+  background-color: #0077cc;
+  color: #fff;
+  border: none;
+  padding: 14px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  width: 100%; /* Make button full width for a modern look */
+}
+
+.signup-button:hover {
+  background-color: #005fa3;
+}
+
+/* Switch between login/sign-up */
+.switch-auth {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.auth-link {
+  color: #0077cc;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+}
